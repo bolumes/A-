@@ -13,10 +13,7 @@ Vagrant.configure("2") do |config|
         v.cpus = 2
         v.linked_clone = true
       end
-      node.vm.provision "shell", path: "./provision/web.sh"
-
-      # the box generic/alpine might not have shared folders by default
-      #node.vm.synced_folder "app/", "/var/www/html"
+      
     end
 
 end
