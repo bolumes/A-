@@ -1,0 +1,24 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  
+    # Configuração da máquina loadbalancer
+    config.vm.define "loadbalancer" do |lb|
+      lb.vm.box = "bento/ubuntu-22.04"
+      lb.vm.hostname = "loadbalancer"
+      
+      # Configuração da rede privada
+      lb.vm.network :private_network, ip: "192.168.44.12"
+      
+      # Configuração do provider (VirtualBox)
+      lb.vm.provider "virtualbox" do |v|
+        v.name = "loadbalancer"
+        v.memory = 2048
+        v.cpus = 2
+        v.linked_clone = true
+      end
+    end
+    
+  end
+  

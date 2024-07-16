@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.vm.define "db-slave" do |db|
+      db.vm.box = "bento/ubuntu-22.04"
+      db.vm.hostname = "db-slave"
+      db.vm.network :private_network, ip: "192.168.44.15"
+      db.vm.provider "virtualbox" do |v|
+        v.name = "db-slave"
+        v.memory = 2048
+        v.cpus = 2
+        v.linked_clone = true
+      end
+      
+    end
+
+end
