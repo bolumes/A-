@@ -6,6 +6,7 @@ Neste projeto temos como objetivo configurar uma infraestrutura de serviços web
 Componentes da Infraestrutura
 A infraestrutura sera composta pelos seguintes componentes:
 
+![Arquitetura ProjetoA](https://github.com/user-attachments/assets/4afe8aca-753e-492f-b8dd-8289da0c3115)
 
 
 
